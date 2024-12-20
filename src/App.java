@@ -4,15 +4,26 @@ import java.util.Scanner;
 public class App {
     public static void main(String[] args) throws Exception {
         
-        //printing Hello World
-        System.out.println("Hello, World!");
-
-        //Basic for loop
-        for (int i = 1; i <= 5; i++) {
-            System.out.println("Hello, World!");
-        }
-
         Scanner scanner = new Scanner(System.in);
+        greetingAggressively();
+        square(scanner);
+        triangle(scanner);
+        christmasTree(scanner);
+        scanner.close();
+
+    }
+
+    public static void greetingAggressively(){
+         //printing Hello World
+         System.out.println("Hello, World!");
+
+         //Basic for loop
+         for (int i = 1; i <= 5; i++) {
+             System.out.println("Hello, World!");
+         }
+    }
+
+    public static void square(Scanner scanner){
         System.out.print("Enter the number of rows: ");
         int rows = scanner.nextInt();
 
@@ -33,16 +44,18 @@ public class App {
             }
             System.out.println();
         }
+    }
 
-        System.out.print("");
-
+    public static void triangle(Scanner scanner) {
         for(int i = 0; i< 3; i++){
-           for(int j = 0; j<= i; j++){
-            System.out.print("*");
-           }
-           System.err.println();
-        }
+            for(int j = 0; j<= i; j++){
+             System.out.print("*");
+            }
+            System.err.println();
+         }
+    }
 
+    public static void christmasTree(Scanner scanner) {
         System.out.print("Enter the height of the tree: ");
         int height = scanner.nextInt();        
 
@@ -62,18 +75,5 @@ public class App {
             }
             System.out.println("*");
          }
-
-
-
-         scanner.close();
- 
-
-
-
-
-
-
-
-
     }
 }
